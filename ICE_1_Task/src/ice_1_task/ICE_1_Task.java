@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class ICE_1_Task {
 public static void main(String[] args) {
-        // TODO code application logic here
+       // users details
         String name = JOptionPane.showInputDialog("Enter your name:");
         String studentNumber = JOptionPane.showInputDialog("Enter your student number:");
         JOptionPane.showMessageDialog(null,"user name:" + name + "\nStudent Number:" + studentNumber);
