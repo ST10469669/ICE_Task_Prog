@@ -33,8 +33,36 @@ public static void main(String[] args) {
             JOptionPane.showMessageDialog(null, "Invalid item selected!");
             return;
         }
-        //int quantity = Integer.parseInt(
-              //  JOptionPane.showInputDialog("Enter quantity:");
-                
+        // Ask for quantity
+        int quantity = Integer.parseInt(
+                JOptionPane.showInputDialog("Enter quantity:")
+        );
+
+        // Check if quantity is valid
+        if (quantity <= 0) {
+            JOptionPane.showMessageDialog(null, "Quantity must be greater than 0!");
+            return;
+        }
+
+        // Calculations
+        double subtotal = price * quantity;
+        double vat = subtotal * 0.15;
+        double total = subtotal + vat;
+
+        // Display receipt
+        JOptionPane.showMessageDialog(null,
+                "===== RECEIPT =====" +
+                "\nName: " + name +
+                "\nStudent Number: " + studentNumber +
+                "\nItem: " + item +
+                "\nPrice: R" + price +
+                "\nQuantity: " + quantity +
+                "\nSubtotal: R" + subtotal +
+                "\nVAT (15%): R" + vat +
+                "\nTotal: R" + total
+        );
     }
 }
+        
+
+  
